@@ -25,7 +25,7 @@ O projeto está em desenvolvimento. Próximas atualizações serão voltadas nas
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 - Jogo na versão versão Web.
-- Leia: `Manual de Instruções`.
+- Leia: [Manual de Instruções](MANUALINSTRUÇÕES.md).
 
 ## 🚀 Jogando
 
