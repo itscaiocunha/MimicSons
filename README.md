@@ -6,7 +6,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/itscaiocunha/mimicSons?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/itscaiocunha/mimicSons?style=for-the-badge)
 
-<img src="assets/Logo_MimicSons" alt="Exemplo imagem">
+<img src="assets/Logo_MimicSons.png" alt="Logo">
 
 > O jogo "Mimic Sons" é uma divertida competição em que os jogadores se revezam imitando diferentes sons, enquanto os demais tentam adivinhar. O design apresenta uma interface simples e agradável, com recursos como gravação de áudio, desafios aleatórios e uma experiência interativa entre os participantes. 
 
@@ -54,7 +54,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="#" title="defina o titulo do link">
-        <img src="assets/perfil" width="100px;" alt="Foto do Caio Cunha no GitHub"/><br>
+        <img src="assets/perfil.png" width="100px;" alt="Foto do Caio Cunha no GitHub"/><br>
         <sub>
           <b>Caio Cunha</b>
         </sub>
