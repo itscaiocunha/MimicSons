@@ -53,7 +53,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="#" title="defina o titulo do link">
+      <a href="https://github.com/itscaiocunha" title="Caio Cunha">
         <img src="assets/perfil.png" width="100px;" alt="Foto do Caio Cunha no GitHub"/><br>
         <sub>
           <b>Caio Cunha</b>
