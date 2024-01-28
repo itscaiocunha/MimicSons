@@ -1,5 +1,3 @@
-/* styles.css */
-
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
@@ -12,11 +10,11 @@ body {
 
 .central-box {
     text-align: center;
-    max-width: 600px; /* Largura máxima para manter o conteúdo centralizado e responsivo */
+    max-width: 600px; 
     width: 100%;
     padding: 20px;
-    box-sizing: border-box; /* Considera padding e borda no cálculo da largura total */
-    background-color: #ffffff; /* Cor de fundo da caixa */
+    box-sizing: border-box; 
+    background-color: #ffffff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     position: relative;
@@ -60,12 +58,12 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3; /* Tom mais escuro ao passar o mouse */
+    background-color: #0056b3;
 }
 
 #game {
     display: none;
-    text-align: center; /* Centraliza o conteúdo na seção do jogo */
+    text-align: center;
     padding: 20px;
 }
 
@@ -87,7 +85,7 @@ button:hover {
     font-size: 16px;
     padding: 10px 20px;
     cursor: pointer;
-    background-color: #28a745; /* Cor verde */
+    background-color: #28a745;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -96,14 +94,13 @@ button:hover {
 }
 
 #nextRoundBtn:hover {
-    background-color: #218838; /* Tom mais escuro ao passar o mouse */
-}
+    background-color: #218838; 
 
 .game-logo {
-    max-width: 30px;  /* Largura máxima desejada para a logo */
+    max-width: 30px;
     width: auto;
     height: auto;
     position: absolute;
-    bottom: 10px;  /* Distância do fundo (bottom) */
-    left: 10px;    /* Distância da esquerda (left) */
-}
+    bottom: 10px;  
+    left: 10px;   
+}}
