@@ -11,9 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const playBtn = document.getElementById('playBtn');
     const audioPlayer = document.getElementById('audioPlayer');
     const guessList = document.getElementById('guessList');
-    const scoresContainer = document.getElementById('scoresContainer');
-    const podiumContainer = document.getElementById('podiumContainer');
-    const POINTS_TO_WIN = 10;
 
     let mediaRecorder;
     let chunks = [];
@@ -26,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'Imite um personagem famoso',
 
     ];
-    let voteList = {};
     let trainingMode = false;
     let teamMode = false;
     let teams = [];
@@ -37,11 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
     stopBtn.addEventListener('click', stopRecording);
     playBtn.addEventListener('click', playRecording);
 
-
+    //Sortei tema para gravação
     function getRandomChallenge() {
         return challengeList[Math.floor(Math.random() * challengeList.length)];
     }
 
+    //Adiciona jogadores
     function addPlayer() {
         const playerName = playerNameInput.value.trim();
         if (playerName !== '') {
@@ -51,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    //Atualiza a lista de jogadores
     function updatePlayerList() {
         const playerList = document.getElementById('playerList');
         playerList.innerHTML = '';
@@ -64,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         startGameBtn.disabled = players.length < 2 || (teamMode && teams.length < 2);
     }
 
+    //Inicia o jogo, esconde o lobby e mostra o jogo
     function startGame() {
         lobbySection.style.display = 'none';
         gameSection.style.display = 'block';
@@ -72,21 +71,38 @@ document.addEventListener('DOMContentLoaded', () => {
         voteList = {};
         updatePlayerList();
         startNextTurn();
-        showScores();
     }
 
+    //Inicia um Round
+    function startNextRound() {
+        guessList.innerHTML = '';
+        document.getElementById('nextRoundBtn').disabled = true;
+    
+        currentPlayerIndex = (currentPlayerIndex + 1) % players.length;
+    
+        turnInfo.innerHTML = `Próxima rodada: Vez de ${players[currentPlayerIndex]}! Aguarde 3 segundos.`;
+        setTimeout(() => {
+            turnInfo.innerHTML = `Desafio: ${getRandomChallenge()}`;
+            recordBtn.disabled = false;
+        }, 3000);
+    }
+
+    document.getElementById('nextRoundBtn').addEventListener('click', startNextRound);
+    
+    //Inicia a rodada
     function startNextTurn() {
         if (trainingMode) {
             turnInfo.innerHTML = `Modo de Treinamento: ${getRandomChallenge()}`;
         } else {
-            turnInfo.innerHTML = `Vez de ${players[currentPlayerIndex]}! Aguarde 5 segundos.`;
+            turnInfo.innerHTML = `Vez de ${players[currentPlayerIndex]}! Aguarde 3 segundos.`;
             setTimeout(() => {
                 turnInfo.innerHTML = `Desafio: ${getRandomChallenge()}`;
                 recordBtn.disabled = false;
-            }, 5000);
+            }, 3000);
         }
     }
 
+    //Inicia a gravação
     async function startRecording() {
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         mediaRecorder = new MediaRecorder(stream);
@@ -110,130 +126,30 @@ document.addEventListener('DOMContentLoaded', () => {
         stopBtn.disabled = false;
     }
 
+    //Para a gravação
     function stopRecording() {
         mediaRecorder.stop();
         recordBtn.disabled = false;
         stopBtn.disabled = true;
     }
 
+    //Reproduz a gravação
     function playRecording() {
         audioPlayer.play();
         guessList.innerHTML += `<li>${players[currentPlayerIndex]} está imitando!</li>`;
         playBtn.disabled = true;
     
         audioPlayer.addEventListener('ended', () => {
-            guessList.innerHTML = '';  // Remova a mensagem de imitação após terminar a reprodução
-            showVotingOptions();
-            showScores();  // Mostrar a mensagem de acerto após terminar a reprodução
+            guessList.innerHTML = ''; 
+            document.getElementById('nextRoundBtn').disabled = false;
         });
     }
 
-    function showVotingOptions() {
-        const votingOptionsHtml = '<h2>Votação</h2><ul id="votingOptions"></ul>';
-        turnInfo.innerHTML += votingOptionsHtml;
-        const votingOptionsList = document.getElementById('votingOptions');
-    
-        players.forEach(player => {
-            if (player !== players[currentPlayerIndex]) {
-                const li = document.createElement('li');
-                li.innerHTML = `${player} <button class="voteButton">Adivinhar</button>`;
-                votingOptionsList.appendChild(li);
-            }
-        });
-    
-        const voteButtons = document.querySelectorAll('.voteButton');
-        voteButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const guessingPlayer = button.parentElement.innerText.split(' ')[0];
-                voteForPlayer(guessingPlayer);
-                // Remova a interface de votação após a votação
-                votingOptionsList.innerHTML = '';
-            });
-        });
-    }
-
-function showScores() {
-    scoresContainer.innerHTML = '<h2>Pontuações</h2>';
-    Object.entries(playerScores).forEach(([player, score]) => {
-        scoresContainer.innerHTML += `<p>${player}: ${score} ponto(s)</p>`;
-    });
-
-    updatePodium();
-}
-
-function startNextTurnAfterVoting() {
-    currentPlayerIndex = (currentPlayerIndex + 1) % players.length;
-
-    const winner = checkForWinner();
-    if (winner) {
-        scoresContainer.innerHTML = `<h2>${winner} venceu o jogo!</h2>`;
-        setTimeout(resetGame, 5000);
-    } else {
-        startNextTurn();
-    }
-}
-
-function updateUI() {
-    showScores();
-    updatePodium();
-    startNextTurnAfterVoting();
-}
-
-function resetGame() {
-    lobbySection.style.display = 'block';
-    gameSection.style.display = 'none';
-    players = [];
-    playerScores = {};
-    voteList = {};
-    updatePlayerList();
-    updateUI();  // Adicione esta linha para garantir a atualização da interface do usuário
-}
-
-    function voteForPlayer(guessingPlayer) {
-    if (!voteList[players[currentPlayerIndex]]) {
-        voteList[players[currentPlayerIndex]] = [];
-    }
-
-    if (!voteList[players[currentPlayerIndex]].includes(guessingPlayer)) {
-        voteList[players[currentPlayerIndex]].push(guessingPlayer);
-
-        if (guessingPlayer === players[currentPlayerIndex]) {
-            playerScores[guessingPlayer] = (playerScores[guessingPlayer] || 0) + 1;
-            turnInfo.innerHTML += `<p>${guessingPlayer} acertou e ganhou 1 ponto!</p>`;
-        }
-    }
-
-    currentPlayerIndex = (currentPlayerIndex + 1) % players.length;
-
-    const winner = checkForWinner();
-    if (winner) {
-        scoresContainer.innerHTML = `<h2>${winner} venceu o jogo!</h2>`;
-        setTimeout(resetGame, 5000);
-    } else {
-        showScores();
-        startNextTurn();
-    }
-}
-  
-
-    function updatePodium() {
-        const sortedPlayers = Object.entries(playerScores).sort((a, b) => b[1] - a[1]);
-
-        podiumContainer.innerHTML = '<h2>Pódio</h2>';
-
-        sortedPlayers.forEach(([player, score], index) => {
-            const podiumItem = document.createElement('div');
-            podiumItem.innerHTML = `<p>${index + 1}. ${player}: ${score} ponto(s)</p>`;
-            podiumContainer.appendChild(podiumItem);
-        });
-    }
-
-    function checkForWinner() {
-        for (const [player, score] of Object.entries(playerScores)) {
-            if (score >= POINTS_TO_WIN) {
-                return player;
-            }
-        }
-        return null;
+    //Reinicia o jogo
+    function resetGame() {
+        lobbySection.style.display = 'block';
+        gameSection.style.display = 'none';
+        players = [];
+        updatePlayerList();
     }
 });
