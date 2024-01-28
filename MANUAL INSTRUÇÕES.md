@@ -3,14 +3,14 @@
 Bem-vindo ao jogo "Mimic Sons"! Este manual fornece instruções básicas para ajudá-lo a começar.
 
 Conteúdo:
-1. Objetivo do Jogo
-2. Configuração Inicial
-3. Jogabilidade
-4. Gravação e Reprodução
-5. Pontuação e Votação
-6. Próxima Rodada
-7. Final do Jogo
-9. Controles do Jogo
+- Objetivo do Jogo
+- Configuração Inicial
+- Jogabilidade
+- Gravação e Reprodução
+- Pontuação e Votação
+- Próxima Rodada
+- Final do Jogo
+- Controles do Jogo
 
 
 1. Objetivo do Jogo
