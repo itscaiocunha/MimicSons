@@ -1,85 +1,109 @@
+/* styles.css */
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
 }
 
-.container {
+.central-box {
     text-align: center;
+    max-width: 600px; /* Largura máxima para manter o conteúdo centralizado e responsivo */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Considera padding e borda no cálculo da largura total */
+    background-color: #ffffff; /* Cor de fundo da caixa */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    position: relative;
+}
+
+.central-box {
+    text-align: center;
+    margin: auto;
+    max-width: 600px;
+}
+
+.central-box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .panel {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin: 20px;
 }
 
 button {
     font-size: 16px;
-    margin: 10px;
+    margin: 15px;
     padding: 10px 20px;
     cursor: pointer;
-    background-color: #3498db;
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 4px;
     transition: background-color 0.3s;
 }
 
+.add {
+    font-size: 10px;
+    padding: 6px 12px; 
+}
+
 button:hover {
-    background-color: #2980b9;
+    background-color: #0056b3; /* Tom mais escuro ao passar o mouse */
 }
 
 #game {
     display: none;
+    text-align: center; /* Centraliza o conteúdo na seção do jogo */
+    padding: 20px;
 }
 
-#audioControls {
+#turnInfo {
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
-#optionsContainer {
-    margin: 10px 0;
+#audioPlayer {
+    margin: 20px 0;
 }
 
-#scoresContainer {
-    margin-top: 20px;
-}
-
-#playerList,
-#guessList,
-#votingOptions {
+#guessList {
     list-style: none;
     padding: 0;
 }
 
-#votingOptions li {
-    margin-bottom: 5px;
-}
-
-input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-#playerNameInput,
-#chatInput,
-#sendChatBtn {
-    padding: 10px;
-    font-size: 14px;
-}
-
-#chatMessages {
-    text-align: left;
-    max-height: 200px;
-    overflow-y: auto;
-    background-color: #ecf0f1;
-    padding: 10px;
+#nextRoundBtn {
+    font-size: 16px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #28a745; /* Cor verde */
+    color: #fff;
+    border: none;
     border-radius: 4px;
-    margin-top: 10px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+#nextRoundBtn:hover {
+    background-color: #218838; /* Tom mais escuro ao passar o mouse */
+}
+
+.game-logo {
+    max-width: 30px;  /* Largura máxima desejada para a logo */
+    width: auto;
+    height: auto;
+    position: absolute;
+    bottom: 10px;  /* Distância do fundo (bottom) */
+    left: 10px;    /* Distância da esquerda (left) */
 }

@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let chunks = [];
     let players = [];
     let currentPlayerIndex = 0;
-    let playerScores = {};
     let challengeList = [
         'Imite um animal de forma hilária',
         'Faça uma imitação usando apenas palavras engraçadas',
@@ -67,8 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
         lobbySection.style.display = 'none';
         gameSection.style.display = 'block';
         currentPlayerIndex = 0;
-        playerScores = {};
-        voteList = {};
         updatePlayerList();
         startNextTurn();
     }

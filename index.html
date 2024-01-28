@@ -4,28 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/icons8-creative-commons-nd-ios-17-filled-96.png" type="image/x-icon" />
     <title>Mimic Sons</title>
 </head>
 <body>
-    <section id="lobby">
-        <h1>Mimic Sons</h1>
-        <label for="playerNameInput">Nome do Jogador:</label>
-        <input type="text" id="playerNameInput">
-        <button id="addPlayerBtn">Adicionar Jogador</button>
-        <button id="startGameBtn" disabled>Iniciar Jogo</button>
-        <ul id="playerList"></ul>
-    </section>
+    <div class="central-box">
+        <section id="lobby">
+            <img src="assets/Logo_MimicSons.png" alt="Logo do Jogo">
+            <label for="playerNameInput">Nome do Jogador:</label>
+            <input type="text" id="playerNameInput">
+            <button id="addPlayerBtn" class="add">Adicionar Jogador</button>
+            <button id="startGameBtn" disabled>Iniciar Jogo</button>
+            <ul id="playerList"></ul>
+        </section>
 
-    <section id="game" style="display: none;">
-        <h1>Jogo de Imitação</h1>
-        <div id="turnInfo"></div>
-        <button id="recordBtn" disabled>Gravar</button>
-        <button id="stopBtn" disabled>Parar</button>
-        <button id="playBtn" disabled>Reproduzir</button>
-        <audio id="audioPlayer" controls></audio>
-        <ul id="guessList"></ul>
-        <button id="nextRoundBtn" disabled >Próxima Rodada</button>
-    </section>
+        <section id="game" style="display: none;">
+    
+            <img src="assets/Logo_MimicSons.png" alt="Logo do Jogo">
+            <div id="turnInfo"></div>
+            <button id="recordBtn" disabled>Gravar</button>
+            <button id="stopBtn" disabled>Parar</button>
+            <button id="playBtn" disabled>Reproduzir</button>
+            <audio id="audioPlayer" controls></audio>
+            <ul id="guessList"></ul>
+            <button id="nextRoundBtn" disabled >Próxima Rodada</button>
+        </section>
+    </div>
 
     <script src="main.js"></script>
 </body>
