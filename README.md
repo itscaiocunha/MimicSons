@@ -3,8 +3,6 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/itscaiocunha/mimicSons?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/itscaiocunha/mimicSons?style=for-the-badge)
 ![GitHub forks](https://img.shields.io/github/forks/itscaiocunha/mimicSons?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/itscaiocunha/mimicSons?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/itscaiocunha/mimicSons?style=for-the-badge)
 
 <img src="assets/Logo_MimicSons.png" alt="Logo">
 
@@ -25,6 +23,7 @@ O projeto está em desenvolvimento. Próximas atualizações serão voltadas nas
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 - Jogo na versão versão Web.
+- Em caso de erro ao abrir o site, limpe o cache para: `itscaiocunha.github.io`
 - Leia: [Manual de Instruções](MANUALINSTRUÇÕES.md).
 
 ## 🚀 Jogando
