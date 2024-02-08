@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'Dolphin',
         'Wolf',
         'Monkey'
-
     ];
     let trainingMode = false;
     let teamMode = false;
@@ -78,9 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
         currentPlayerIndex = (currentPlayerIndex + 1) % players.length;
     
-        turnInfo.innerHTML = `Próxima rodada: Vez de ${players[currentPlayerIndex]}! Aguarde 3 segundos.`;
+        turnInfo.innerHTML = `Next round: Turn ${players[currentPlayerIndex]}! Wait 3 seconds.`;
         setTimeout(() => {
-            turnInfo.innerHTML = `Desafio: ${getRandomChallenge()}`;
+            turnInfo.innerHTML = `Challenge: ${getRandomChallenge()}`;
             recordBtn.disabled = false;
         }, 3000);
     }
@@ -89,11 +88,11 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function startNextTurn() {
         if (trainingMode) {
-            turnInfo.innerHTML = `Modo de Treinamento: ${getRandomChallenge()}`;
+            turnInfo.innerHTML = `Training Mode: ${getRandomChallenge()}`;
         } else {
-            turnInfo.innerHTML = `Vez de ${players[currentPlayerIndex]}! Aguarde 3 segundos.`;
+            turnInfo.innerHTML = `Instead of ${players[currentPlayerIndex]}! Wait 3 seconds.`;
             setTimeout(() => {
-                turnInfo.innerHTML = `Desafio: ${getRandomChallenge()}`;
+                turnInfo.innerHTML = `Challenge: ${getRandomChallenge()}`;
                 recordBtn.disabled = false;
             }, 3000);
         }
@@ -130,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function playRecording() {
         audioPlayer.play();
-        guessList.innerHTML += `<li>${players[currentPlayerIndex]} está imitando!</li>`;
+        guessList.innerHTML += `<li>${players[currentPlayerIndex]} is imitating!</li>`;
         playBtn.disabled = true;
     
         audioPlayer.addEventListener('ended', () => {
