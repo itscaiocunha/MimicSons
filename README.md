@@ -6,48 +6,46 @@
 
 <img src="assets/Logo_MimicSons.png" alt="Logo">
 
-> O jogo "Mimic Sons" é uma divertida competição em que os jogadores se revezam imitando diferentes sons, enquanto os demais tentam adivinhar. O design apresenta uma interface simples e agradável, com recursos como gravação de áudio, desafios aleatórios e uma experiência interativa entre os participantes. 
+> The game "Mimic Sons" is a fun competition in which players take turns imitating different sounds, while the others try to guess. The design features a simple and pleasant interface, with features such as audio recording, random challenges and an interactive experience between participants. 
 
-### Ajustes e melhorias
+### Adjustments and improvements
 
-O projeto está em desenvolvimento. Próximas atualizações serão voltadas nas seguintes tarefas:
+The project is under development. Next updates will focus on the following tasks:
 
-- [ ] Adição de um sistema de votação
-- [ ] Pódio local
-- [ ] Tela de vencedor
-- [ ] Jogabilidade virtual
-- [ ] Tela de treino e manual de instruções
+- [ ] Adding a voting system
+- [ ] Local podium
+- [ ] Winner screen
+- [ ] Virtual gameplay
+- [ ] Training screen and instruction manual
 
-## 🚨 Importante
+## 🚨 Important
 
-Antes de começar, verifique se você atendeu aos seguintes requisitos:
+Before you begin, make sure you've met the following requirements:
 
-- Jogo na versão versão Web.
-- Em caso de erro ao abrir o site, limpe o cache para: `itscaiocunha.github.io`
-- Leia: [Manual de Instruções](MANUALINSTRUÇÕES.md).
+- Game in web version.
+- In case of an error when opening the website, clear the cache to: `itscaiocunha.github.io`
+- Read: [Instruction manual](MANUALINSTRUÇÕES.md).
 
-## 🚀 Jogando
+## 🚀 Play
 
-Para jogar o Mimic Sons, acesse:
+To play Mimic Sons, go to:
 
 - https://itscaiocunha.github.io/MimicSons/
 
 
-## 📫 Contribuindo para MimicSons
+## 📫 Contributing to MimicSons
 
-Para contribuir, siga estas etapas:
+To contribute, follow these steps:
 
-1. Bifurque este repositório.
-2. Crie um branch: `git checkout -b <nome_branch>`.
-3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
-4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
-5. Crie a solicitação de pull.
+1. Fork this repository.
+2. Create a branch: `git checkout -b <branch_name>`.
+3. Make your changes and commit them: `git commit -m '<mensagem_commit>'`
+4. Push to the original branch: `git push origin <project_name> / <location>`
+5. Create the pull request.
 
-Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
+Alternatively, see the GitHub documentation at [how to create a pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
-## 🤝 Colaboradores
-
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+## 🤝 Collaborators
 
 <table>
   <tr>
@@ -61,13 +59,13 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
 </table>
 
-## 😄 Seja um dos contribuidores
+## 😄 Be one of the contributors
 
-Quer fazer parte desse projeto? Me chame em alguma rede social minha:
+Do you want to be part of this project? Call me on one of my social networks:
   - Instagram: @itscaiocunha
   - Twitter: @itscaiocunha
   - LinkedIn: https://www.linkedin.com/in/caio-grilo-da-cunha-05ba14240/
 
-## 📝 Licença
+## 📝 License
 
-Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+This project is under license. See the file [LICENSE](LICENSE.md) for more details.
