@@ -1,53 +1,53 @@
-# Manual de Instruções - Mimic Sons
+# Instruction Manual - Mimic Sounds
 
-Bem-vindo ao jogo "Mimic Sons"! Este manual fornece instruções básicas para ajudá-lo a começar.
+Welcome to the "Mimic Sons" game! This manual provides basic instructions to help you get started.
 
-Conteúdo:
-- Objetivo do Jogo
-- Configuração Inicial
-- Jogabilidade
-- Gravação e Reprodução
-- Pontuação e Votação
-- Próxima Rodada
-- Final do Jogo
-- Controles do Jogo
+Content:
+- Game Objective
+- Initial setting
+- Gameplay
+- Recording and Playback
+- Scoring and Voting
+- Next Round
+- End of the game
+- Game Controls
 
 
-1. Objetivo do Jogo
-O objetivo é imitar sons de acordo com os desafios apresentados e adivinhar corretamente os sons dos outros jogadores para ganhar pontos.
+1. Game Objective
+The objective is to imitate sounds according to the challenges presented and correctly guess the sounds of other players to earn points.
 
-2. Configuração Inicial
-Insira os nomes dos jogadores e clique em "Adicionar Jogador". 
-Quando houver pelo menos dois jogadores, clique em "Iniciar Jogo".
+2. Initial Setup
+Enter player names and click "Add Player".
+When there are at least two players, click "Start Game".
 
-3. Jogabilidade
-Um jogador por vez receberá um desafio para imitar.
-Após a imitação, os outros jogadores tentam adivinhar o som.
-Os jogadores recebem pontos quando adivinham corretamente.
+3. Gameplay
+One player at a time will be given a challenge to imitate.
+After imitating, the other players try to guess the sound.
+Players receive points when they guess correctly.
 
-4. Gravação e Reprodução
-Clique em "Gravar" para iniciar a gravação do som.
-Clique em "Parar" para encerrar a gravação.
-Use "Reproduzir" para ouvir a imitação.
+4. Recording and Playback
+Click "Record" to start recording the sound.
+Click "Stop" to end recording.
+Use "Play" to hear the imitation.
 
-5. Pontuação e Votação
-Os jogadores que adivinharem corretamente ganham pontos.
-Após a reprodução, os jogadores votam no melhor desempenho.
-A votação será feita de maneira externa ao sistema.
+5. Scoring and Voting
+Players who guess correctly earn points.
+After playback, players vote for the best performance.
+Voting will be done externally to the system.
 
-6. Próxima Rodada
-Após a votação, clique em "Próxima Rodada" para continuar.
-O próximo jogador será designado para imitar.
+6. Next Round
+After voting, click "Next Round" to continue.
+The next player will be assigned to imitate.
 
-7. Final do Jogo
-O jogo continua até que um jogador alcance a pontuação alvo, que é de 10 pontos.
+7. End of the Game
+The game continues until a player reaches the target score, which is 10 points.
 
-8. Controles do Jogo
-Adicionar Jogador: Insira o nome e clique em "Adicionar Jogador".
-Iniciar Jogo: Clique em "Iniciar Jogo" após adicionar jogadores.
-Gravar: Registra a imitação do jogador.
-Parar: Encerra a gravação.
-Reproduzir: Toca a imitação gravada.
-Próxima Rodada: Avança para a próxima rodada.
+8. Game Controls
+Add Player: Enter the name and click "Add Player".
+Start Game: Click "Start Game" after adding players.
+Record: Records the player's imitation.
+Stop: Ends recording.
+Play: Play the recorded imitation.
+Next Round: Advance to the next round.
 
-##Divirta-se jogando "Mimic Sons"!
+##Have fun playing "Mimic Sons"!
