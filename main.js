@@ -17,9 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let players = [];
     let currentPlayerIndex = 0;
     let challengeList = [
-        'Imite um animal de forma hilária',
-        'Faça uma imitação usando apenas palavras engraçadas',
-        'Imite um personagem famoso',
+        'Whale',
+        'Crickets',
+        'Frog',
+        'Elephant',
+        'Birds',
+        'Lion',
+        'Dolphin',
+        'Wolf',
+        'Monkey'
 
     ];
     let trainingMode = false;
@@ -32,12 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
     stopBtn.addEventListener('click', stopRecording);
     playBtn.addEventListener('click', playRecording);
 
-    //Sortei tema para gravação
     function getRandomChallenge() {
         return challengeList[Math.floor(Math.random() * challengeList.length)];
     }
 
-    //Adiciona jogadores
     function addPlayer() {
         const playerName = playerNameInput.value.trim();
         if (playerName !== '') {
@@ -47,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    //Atualiza a lista de jogadores
     function updatePlayerList() {
         const playerList = document.getElementById('playerList');
         playerList.innerHTML = '';
@@ -61,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
         startGameBtn.disabled = players.length < 2 || (teamMode && teams.length < 2);
     }
 
-    //Inicia o jogo, esconde o lobby e mostra o jogo
     function startGame() {
         lobbySection.style.display = 'none';
         gameSection.style.display = 'block';
@@ -70,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
         startNextTurn();
     }
 
-    //Inicia um Round
     function startNextRound() {
         guessList.innerHTML = '';
         document.getElementById('nextRoundBtn').disabled = true;
@@ -86,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('nextRoundBtn').addEventListener('click', startNextRound);
     
-    //Inicia a rodada
     function startNextTurn() {
         if (trainingMode) {
             turnInfo.innerHTML = `Modo de Treinamento: ${getRandomChallenge()}`;
@@ -99,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    //Inicia a gravação
     async function startRecording() {
         const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
         mediaRecorder = new MediaRecorder(stream);
@@ -123,14 +122,12 @@ document.addEventListener('DOMContentLoaded', () => {
         stopBtn.disabled = false;
     }
 
-    //Para a gravação
     function stopRecording() {
         mediaRecorder.stop();
         recordBtn.disabled = false;
         stopBtn.disabled = true;
     }
 
-    //Reproduz a gravação
     function playRecording() {
         audioPlayer.play();
         guessList.innerHTML += `<li>${players[currentPlayerIndex]} está imitando!</li>`;
@@ -142,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    //Reinicia o jogo
     function resetGame() {
         lobbySection.style.display = 'block';
         gameSection.style.display = 'none';
