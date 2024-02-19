@@ -24,7 +24,7 @@ Before you begin, make sure you've met the following requirements:
 
 - Game in web version.
 - In case of an error when opening the website, clear the cache to: `itscaiocunha.github.io`
-- Read: [Instruction manual](MANUALINSTRUÇÕES.md).
+- Read: [Instruction manual](INSTRUCTIONMANUAL.md).
 
 ## 🚀 Play
 
